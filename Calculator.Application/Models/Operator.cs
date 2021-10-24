@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Calculator.Infrastructure.Interfaces;
 
-namespace Калькулятор.Models
+namespace Calculator.Models
 {
     public class Operator : IOperator
     {
@@ -14,12 +10,12 @@ namespace Калькулятор.Models
         public Operation Operation { get; private set; }
         public double? Result { get; private set; }
 
-        public Operator (double result)
+        public Operator(double result)
         {
             Result = result;
         }
-        
-        public Operator (IOperator leftOperand, IOperator rightOperand, Operation operation)
+
+        public Operator(IOperator leftOperand, IOperator rightOperand, Operation operation)
         {
             LeftOperand = leftOperand;
             RightOperand = rightOperand;

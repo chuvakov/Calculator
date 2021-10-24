@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Calculator.Models;
 
-namespace WinFormsApp1
+namespace Calculator.Infrastructure.Interfaces
 {
-    interface IOperator
+    public interface IOperator
     {
         IOperator LeftOperand { get; }
         IOperator RightOperand { get; }

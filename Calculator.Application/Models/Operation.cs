@@ -1,6 +1,6 @@
-﻿using Калькулятор.Enums;
+﻿using Calculator.Enums;
 
-namespace Калькулятор.Models
+namespace Calculator.Models
 {
     public class Operation
     {
@@ -10,7 +10,7 @@ namespace Калькулятор.Models
         public static Operation PLUS = new Operation(OperationType.Plus, OperationPriorityType.Second);
         public static Operation MINUS = new Operation(OperationType.Minus, OperationPriorityType.Second);
         public static Operation DIVISION = new Operation(OperationType.Division, OperationPriorityType.First);
-        public static Operation MULTIPLY = new Operation(OperationType.Multiply, OperationPriorityType.First); 
+        public static Operation MULTIPLY = new Operation(OperationType.Multiply, OperationPriorityType.First);
 
         public Operation(OperationType value, OperationPriorityType priority)
         {

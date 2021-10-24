@@ -1,4 +1,4 @@
-﻿namespace Калькулятор.Enums
+﻿namespace Calculator.Enums
 {
     public enum OperationPriorityType
     {

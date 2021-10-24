@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using Калькулятор.Enums;
+﻿using Calculator.Enums;
+using Calculator.Models;
+using System.Collections.Generic;
 
 namespace Калькулятор.Models
 {
