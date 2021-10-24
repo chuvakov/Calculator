@@ -8,14 +8,14 @@ namespace Calculator.WinForms
 {
     public partial class MainForm : Form
     {
-        private CalcModule calcModule;
+        private Калькулятор.Models.Calculator calcModule;
         private bool isClearDisplay;
 
         public MainForm()
         {
             InitializeComponent();
 
-            calcModule = new CalcModule();
+            calcModule = new Калькулятор.Models.Calculator();
         }
 
         StringBuilder result = new StringBuilder();

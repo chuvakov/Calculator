@@ -1,11 +1,16 @@
 ﻿using Calculator.Enums;
+using Calculator.Infrastructure.Interfaces;
 using Calculator.Models;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Калькулятор.Models
 {
-    public class CalcModule
+    public class Calculator : ICalculator
     {
+        private readonly StringBuilder _expression = new StringBuilder();
+
         public double? LeftNumber { get; set; }
         public double? RightNumber { get; set; }
 
@@ -13,7 +18,7 @@ namespace Калькулятор.Models
 
         public double? Result => LeftNumber;   // => то же самое что Return (это св-во, работает как метод)
 
-        public CalcModule()
+        public Calculator()
         {
             Operations = new List<Operation>();
         }
@@ -61,6 +66,24 @@ namespace Калькулятор.Models
                     Operations.Remove(operation);
                     return;
                 }
+            }
+        }
+
+        public void Clear()
+        {
+            _expression.Clear();
+        }
+
+        public void CalculateExpression()
+        {
+            List<char> expSymbols = _expression
+                .ToString()
+                .ToCharArray()
+                .ToList();                                          //цепной вызов
+
+            while(expSymbols.Count != 1)
+            {
+
             }
         }
     }
