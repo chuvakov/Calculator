@@ -9,6 +9,7 @@ namespace Calculator.Infrastructure.Interfaces
     public interface ICalculator
     {
         void Clear();
-        void CalculateExpression();        
+        void CalculateExpression();
+        void UpdateExpression(string symbol);
     }
 }

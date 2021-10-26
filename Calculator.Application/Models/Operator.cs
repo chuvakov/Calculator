@@ -1,4 +1,5 @@
-﻿using Calculator.Infrastructure.Interfaces;
+﻿using Calculator.Enums;
+using Calculator.Infrastructure.Interfaces;
 
 namespace Calculator.Models
 {
@@ -20,6 +21,28 @@ namespace Calculator.Models
             LeftOperand = leftOperand;
             RightOperand = rightOperand;
             Operation = operation;
+        }
+
+        public void Calculate()
+        {
+            switch (Operation.Value)
+            {
+                case OperationType.Plus:
+                    Result = LeftOperand.Result + (RightOperand?.Result ?? 0);
+                    break;
+
+                case OperationType.Minus:
+                    Result = LeftOperand.Result - (RightOperand?.Result ?? 0);
+                    break;
+
+                case OperationType.Division:
+                    Result = LeftOperand.Result / (RightOperand?.Result ?? 1);
+                    break;
+
+                case OperationType.Multiply:
+                    Result = LeftOperand.Result * (RightOperand?.Result ?? 1);
+                    break;                
+            }
         }
     }
 }

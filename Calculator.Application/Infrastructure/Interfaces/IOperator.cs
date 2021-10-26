@@ -9,5 +9,7 @@ namespace Calculator.Infrastructure.Interfaces
 
         Operation Operation { get; }
         double? Result { get; }
+
+        void Calculate();
     }
 }
