@@ -20,19 +20,6 @@ namespace Calculator.Models
             Symbol = symbol;
         }
 
-        public static bool operator >(Operation left, Operation right)   // Переопределяем знак > ??? если я правильно понял, то это читается как:
-                                                                         // Переопределить оператор > для класса Operation, принемает левый и правый объекты класса Operation
-                                                                         // и возвращает TRUE(bool) если Operation left БОЛЬШЕ(Приоритет) чем Operation right, иначе FALSE ???
-        {
-            return left.Priority > right.Priority;
-        }
-
-        public static bool operator <(Operation left, Operation right)   // Переопределяем знак <
-                                                                         // возвращает TRUE(bool) если Operation left МЕНЬШЕ чем Operation right, иначе TRUE ???
-        {
-            return left.Priority < right.Priority;
-        }
-
         public static Operation GetOperation(string symbol)
         {
             switch (symbol)
