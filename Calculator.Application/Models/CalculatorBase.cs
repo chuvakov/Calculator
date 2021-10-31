@@ -1,4 +1,5 @@
-﻿using Calculator.Infrastructure.Interfaces;
+﻿using Calculator.Enums;
+using Calculator.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,28 +9,59 @@ namespace Calculator.Models
 {
     public class CalculatorBase : ICalculator
     {
-        private readonly StringBuilder _expression = new StringBuilder();
-        public double? Result { get; private set; }
+        private readonly StringBuilder _expression = new StringBuilder();        
+        private readonly string[] _operationSymbols = 
+        { 
+            Operation.PLUS.Symbol, 
+            Operation.MINUS.Symbol, 
+            Operation.MULTIPLY.Symbol, 
+            Operation.DIVISION.Symbol 
+        };
+
+        private bool _isBreakCalc;
+
+        public double? Result { get; private set; }        
 
         public void Clear()
         {
             _expression.Clear();
+            Result = null;
         }
 
         public void CalculateExpression()
         {
             List<string> expSymbols = _expression
                 .ToString()
-                .Split(' ')
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)  // удаляет пустые строки из результирущего массива после Сплита
                 .ToList();
 
             while (expSymbols.Count != 1)
             {
                 Operation operation = GetPriorityOperation(expSymbols);
                 CalcOperator(expSymbols, operation);
+
+                if (_isBreakCalc)
+                {                    
+                    break;
+                }
             }
 
-            Result = Convert.ToDouble(expSymbols[0]);
+            Result = GetResult(expSymbols);           
+        }
+
+        private double GetResult(List<string> expSymbols)
+        {
+            if (_isBreakCalc)
+            {
+                _isBreakCalc = false;
+
+                int lastIndex = expSymbols.Count - 1;
+                return Convert.ToDouble(expSymbols[lastIndex]);
+            }
+            else
+            {
+                return Convert.ToDouble(expSymbols[0]);
+            }
         }
 
         /// <summary>
@@ -51,6 +83,11 @@ namespace Calculator.Models
             @operator.Calculate();
 
             expSymbols[GetOperationIndex(expSymbols, operation.Symbol)] = @operator.Result.ToString();
+
+            if (@operator.RightOperand == null && @operator.Operation.Priority == OperationPriorityType.First)
+            {
+                _isBreakCalc = true;
+            }
         }
 
         private IOperator GetOperand(List<string> expSymbols, int index)
@@ -123,7 +160,17 @@ namespace Calculator.Models
 
         public void UpdateExpression(string symbol)
         {
-            _expression.Append(symbol);
+            string symbolNormalized = symbol.Trim();
+            int lastSymbolIndex = _expression.Length - 2;
+
+            if (lastSymbolIndex >= 0 && _operationSymbols.Contains(_expression[lastSymbolIndex].ToString()) && _operationSymbols.Contains(symbolNormalized))
+            {
+                _expression[lastSymbolIndex] = char.Parse(symbolNormalized);
+            }
+            else
+            {
+                _expression.Append(symbol);
+            }            
         }
     }
 }

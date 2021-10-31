@@ -58,7 +58,7 @@ namespace Calculator.WinForms
             this.but8.TabIndex = 0;
             this.but8.Text = "8";
             this.but8.UseVisualStyleBackColor = true;
-            this.but8.Click += new System.EventHandler(this.but8_Click);
+            this.but8.Click += new System.EventHandler(this.But8_Click);
             // 
             // but7
             // 
@@ -69,7 +69,7 @@ namespace Calculator.WinForms
             this.but7.TabIndex = 1;
             this.but7.Text = "7";
             this.but7.UseVisualStyleBackColor = true;
-            this.but7.Click += new System.EventHandler(this.but7_Click);
+            this.but7.Click += new System.EventHandler(this.But7_Click);
             // 
             // but9
             // 
@@ -80,7 +80,7 @@ namespace Calculator.WinForms
             this.but9.TabIndex = 2;
             this.but9.Text = "9";
             this.but9.UseVisualStyleBackColor = true;
-            this.but9.Click += new System.EventHandler(this.but9_Click);
+            this.but9.Click += new System.EventHandler(this.But9_Click);
             // 
             // but4
             // 
@@ -91,7 +91,7 @@ namespace Calculator.WinForms
             this.but4.TabIndex = 3;
             this.but4.Text = "4";
             this.but4.UseVisualStyleBackColor = true;
-            this.but4.Click += new System.EventHandler(this.but4_Click);
+            this.but4.Click += new System.EventHandler(this.But4_Click);
             // 
             // but5
             // 
@@ -102,7 +102,7 @@ namespace Calculator.WinForms
             this.but5.TabIndex = 4;
             this.but5.Text = "5";
             this.but5.UseVisualStyleBackColor = true;
-            this.but5.Click += new System.EventHandler(this.but5_Click);
+            this.but5.Click += new System.EventHandler(this.But5_Click);
             // 
             // but6
             // 
@@ -113,7 +113,7 @@ namespace Calculator.WinForms
             this.but6.TabIndex = 5;
             this.but6.Text = "6";
             this.but6.UseVisualStyleBackColor = true;
-            this.but6.Click += new System.EventHandler(this.but6_Click);
+            this.but6.Click += new System.EventHandler(this.But6_Click);
             // 
             // but1
             // 
@@ -124,7 +124,7 @@ namespace Calculator.WinForms
             this.but1.TabIndex = 6;
             this.but1.Text = "1";
             this.but1.UseVisualStyleBackColor = true;
-            this.but1.Click += new System.EventHandler(this.but1_Click);
+            this.but1.Click += new System.EventHandler(this.But1_Click);
             // 
             // but2
             // 
@@ -135,7 +135,7 @@ namespace Calculator.WinForms
             this.but2.TabIndex = 7;
             this.but2.Text = "2";
             this.but2.UseVisualStyleBackColor = true;
-            this.but2.Click += new System.EventHandler(this.but2_Click);
+            this.but2.Click += new System.EventHandler(this.But2_Click);
             // 
             // but3
             // 
@@ -146,7 +146,7 @@ namespace Calculator.WinForms
             this.but3.TabIndex = 8;
             this.but3.Text = "3";
             this.but3.UseVisualStyleBackColor = true;
-            this.but3.Click += new System.EventHandler(this.but3_Click);
+            this.but3.Click += new System.EventHandler(this.But3_Click);
             // 
             // but0
             // 
@@ -157,7 +157,7 @@ namespace Calculator.WinForms
             this.but0.TabIndex = 9;
             this.but0.Text = "0";
             this.but0.UseVisualStyleBackColor = true;
-            this.but0.Click += new System.EventHandler(this.but0_Click);
+            this.but0.Click += new System.EventHandler(this.But0_Click);
             // 
             // butSymbol
             // 
@@ -168,7 +168,7 @@ namespace Calculator.WinForms
             this.butSymbol.TabIndex = 10;
             this.butSymbol.Text = ",";
             this.butSymbol.UseVisualStyleBackColor = true;
-            this.butSymbol.Click += new System.EventHandler(this.butSymbol_Click);
+            this.butSymbol.Click += new System.EventHandler(this.ButSymbol_Click);
             // 
             // butEqual
             // 
@@ -179,7 +179,7 @@ namespace Calculator.WinForms
             this.butEqual.TabIndex = 11;
             this.butEqual.Text = "=";
             this.butEqual.UseVisualStyleBackColor = true;
-            this.butEqual.Click += new System.EventHandler(this.butEqual_Click);
+            this.butEqual.Click += new System.EventHandler(this.ButEqual_Click);
             // 
             // butPlus
             // 
@@ -190,7 +190,7 @@ namespace Calculator.WinForms
             this.butPlus.TabIndex = 12;
             this.butPlus.Text = "+";
             this.butPlus.UseVisualStyleBackColor = true;
-            this.butPlus.Click += new System.EventHandler(this.butPlus_Click);
+            this.butPlus.Click += new System.EventHandler(this.ButPlus_Click);
             // 
             // butMinus
             // 
@@ -201,7 +201,7 @@ namespace Calculator.WinForms
             this.butMinus.TabIndex = 13;
             this.butMinus.Text = "-";
             this.butMinus.UseVisualStyleBackColor = true;
-            this.butMinus.Click += new System.EventHandler(this.butMinus_Click);
+            this.butMinus.Click += new System.EventHandler(this.ButMinus_Click);
             // 
             // butMultiply
             // 
@@ -212,7 +212,7 @@ namespace Calculator.WinForms
             this.butMultiply.TabIndex = 14;
             this.butMultiply.Text = "*";
             this.butMultiply.UseVisualStyleBackColor = true;
-            this.butMultiply.Click += new System.EventHandler(this.butMultiply_Click);
+            this.butMultiply.Click += new System.EventHandler(this.ButMultiply_Click);
             // 
             // butDivide
             // 
@@ -223,7 +223,7 @@ namespace Calculator.WinForms
             this.butDivide.TabIndex = 15;
             this.butDivide.Text = "/";
             this.butDivide.UseVisualStyleBackColor = true;
-            this.butDivide.Click += new System.EventHandler(this.butDivide_Click);
+            this.butDivide.Click += new System.EventHandler(this.ButDivide_Click);
             // 
             // butAc
             // 
@@ -234,7 +234,7 @@ namespace Calculator.WinForms
             this.butAc.TabIndex = 16;
             this.butAc.Text = "AC";
             this.butAc.UseVisualStyleBackColor = true;
-            this.butAc.Click += new System.EventHandler(this.butAc_Click);
+            this.butAc.Click += new System.EventHandler(this.ButAc_Click);
             // 
             // DisplayTextBox
             // 
