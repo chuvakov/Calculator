@@ -1,5 +1,4 @@
-﻿
-namespace Calculator.WinForms
+﻿namespace Calculator.WinForms
 {
     partial class MainForm
     {
@@ -298,4 +297,3 @@ namespace Calculator.WinForms
         private System.Windows.Forms.TextBox DisplayTextBox;
     }
 }
-

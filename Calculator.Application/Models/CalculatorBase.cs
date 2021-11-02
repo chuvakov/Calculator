@@ -32,7 +32,7 @@ namespace Calculator.Models
         {
             List<string> expSymbols = _expression
                 .ToString()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries)  // удаляет пустые строки из результирущего массива после Сплита
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)  // удаляет пустые строки из результирущего массива после Сплита
                 .ToList();
 
             while (expSymbols.Count != 1)

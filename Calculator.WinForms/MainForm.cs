@@ -1,6 +1,13 @@
 ﻿using Calculator.Enums;
 using Calculator.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator.WinForms
@@ -10,7 +17,7 @@ namespace Calculator.WinForms
         private CalculatorBase _calculator;
         private OperationType? _selectOperation;
 
-        private bool _isClearDisplay;        
+        private bool _isClearDisplay;
         private bool _isCalc;
 
         public MainForm()
@@ -52,7 +59,7 @@ namespace Calculator.WinForms
             {
                 _isCalc = true;
             }
-        }      
+        }
 
         private void But1_Click(object sender, EventArgs e)
         {
@@ -178,7 +185,7 @@ namespace Calculator.WinForms
         }
 
         private void ButPlus_Click(object sender, EventArgs e)
-        {            
+        {
             _isClearDisplay = true;
 
             if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Plus && !_isCalc)
@@ -215,7 +222,7 @@ namespace Calculator.WinForms
             if (_isCalc)
             {
                 DisplayCalcResult();
-            }               
+            }
         }
 
         private void ButMultiply_Click(object sender, EventArgs e)
@@ -224,7 +231,7 @@ namespace Calculator.WinForms
             {
                 _isCalc = false;
             }
-            
+
             _isClearDisplay = true;
 
             if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Multiply && !_isCalc)
@@ -238,7 +245,7 @@ namespace Calculator.WinForms
             if (_isCalc)
             {
                 DisplayCalcResult();
-            }               
+            }
         }
 
         private void ButMinus_Click(object sender, EventArgs e)
@@ -254,7 +261,7 @@ namespace Calculator.WinForms
             {
                 DisplayCalcResult();
             }
-            
+
             _calculator.UpdateExpression(" - ");
             _selectOperation = OperationType.Minus;
         }
@@ -263,12 +270,12 @@ namespace Calculator.WinForms
         {
             DisplayCalcResult();
         }
-        
+
         private void ButAc_Click(object sender, EventArgs e)
         {
             _calculator.Clear();
 
-            DisplayTextBox.Text = null;            
+            DisplayTextBox.Text = null;
             _selectOperation = null;
 
             _isCalc = false;
