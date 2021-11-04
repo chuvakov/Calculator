@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Calculator.WinForms
 {
+    // TODO: Поменять иконку, функционал запятой, функционал нуля, инсталятор, кнопки клавиатуры.
     public partial class MainForm : Form
     {
         private CalculatorBase _calculator;
@@ -280,6 +281,16 @@ namespace Calculator.WinForms
 
             _isCalc = false;
             _isClearDisplay = false;
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
