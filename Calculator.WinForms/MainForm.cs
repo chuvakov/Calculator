@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Calculator.WinForms
 {
-    // TODO: функционал нуля, инсталятор, кнопки клавиатуры.
+    // TODO: инсталятор, кнопки клавиатуры.
     public partial class MainForm : Form
     {
         private CalculatorBase _calculator;
@@ -46,9 +46,8 @@ namespace Calculator.WinForms
             if (DisplayTextBox.Text != "0")
             {
                 DisplayTextBox.Text = DisplayTextBox.Text + 0;
+                _calculator.UpdateExpression("0");
             }
-
-            _calculator.UpdateExpression("0");
 
             if (_selectOperation.HasValue)
             {
@@ -59,6 +58,12 @@ namespace Calculator.WinForms
         private void But1_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 1;
 
             _calculator.UpdateExpression("1");
@@ -72,6 +77,12 @@ namespace Calculator.WinForms
         private void But2_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 2;
 
             _calculator.UpdateExpression("2");
@@ -85,6 +96,12 @@ namespace Calculator.WinForms
         private void But3_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 3;
 
             _calculator.UpdateExpression("3");
@@ -98,6 +115,12 @@ namespace Calculator.WinForms
         private void But4_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 4;
 
             _calculator.UpdateExpression("4");
@@ -111,6 +134,12 @@ namespace Calculator.WinForms
         private void But5_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 5;
 
             _calculator.UpdateExpression("5");
@@ -124,6 +153,12 @@ namespace Calculator.WinForms
         private void But6_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 6;
 
             _calculator.UpdateExpression("6");
@@ -137,6 +172,12 @@ namespace Calculator.WinForms
         private void But7_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 7;
 
             _calculator.UpdateExpression("7");
@@ -150,6 +191,12 @@ namespace Calculator.WinForms
         private void But8_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 8;
 
             _calculator.UpdateExpression("8");
@@ -163,6 +210,12 @@ namespace Calculator.WinForms
         private void But9_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + 9;
 
             _calculator.UpdateExpression("9");
