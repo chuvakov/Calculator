@@ -36,7 +36,7 @@
             this.but7 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.but8 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.but9 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.butSymbol = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.butDecimal = new Guna.UI2.WinForms.Guna2CircleButton();
             this.but0 = new Guna.UI2.WinForms.Guna2Button();
             this.but1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.but2 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -65,7 +65,7 @@
             this.but4.ForeColor = System.Drawing.Color.White;
             this.but4.HoverState.Parent = this.but4;
             this.but4.Location = new System.Drawing.Point(41, 335);
-            this.but4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but4.Margin = new System.Windows.Forms.Padding(4);
             this.but4.Name = "but4";
             this.but4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -84,7 +84,7 @@
             this.but5.ForeColor = System.Drawing.Color.White;
             this.but5.HoverState.Parent = this.but5;
             this.but5.Location = new System.Drawing.Point(136, 335);
-            this.but5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but5.Margin = new System.Windows.Forms.Padding(4);
             this.but5.Name = "but5";
             this.but5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -103,7 +103,7 @@
             this.but6.ForeColor = System.Drawing.Color.White;
             this.but6.HoverState.Parent = this.but6;
             this.but6.Location = new System.Drawing.Point(231, 335);
-            this.but6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but6.Margin = new System.Windows.Forms.Padding(4);
             this.but6.Name = "but6";
             this.but6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -122,7 +122,7 @@
             this.but7.ForeColor = System.Drawing.Color.White;
             this.but7.HoverState.Parent = this.but7;
             this.but7.Location = new System.Drawing.Point(41, 260);
-            this.but7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but7.Margin = new System.Windows.Forms.Padding(4);
             this.but7.Name = "but7";
             this.but7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -141,7 +141,7 @@
             this.but8.ForeColor = System.Drawing.Color.White;
             this.but8.HoverState.Parent = this.but8;
             this.but8.Location = new System.Drawing.Point(136, 260);
-            this.but8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but8.Margin = new System.Windows.Forms.Padding(4);
             this.but8.Name = "but8";
             this.but8.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -160,7 +160,7 @@
             this.but9.ForeColor = System.Drawing.Color.White;
             this.but9.HoverState.Parent = this.but9;
             this.but9.Location = new System.Drawing.Point(231, 260);
-            this.but9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but9.Margin = new System.Windows.Forms.Padding(4);
             this.but9.Name = "but9";
             this.but9.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -170,24 +170,24 @@
             this.but9.Text = "9";
             this.but9.Click += new System.EventHandler(this.But9_Click);
             // 
-            // butSymbol
+            // butDecimal
             // 
-            this.butSymbol.CheckedState.Parent = this.butSymbol;
-            this.butSymbol.CustomImages.Parent = this.butSymbol;
-            this.butSymbol.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.butSymbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butSymbol.ForeColor = System.Drawing.Color.White;
-            this.butSymbol.HoverState.Parent = this.butSymbol;
-            this.butSymbol.Location = new System.Drawing.Point(231, 485);
-            this.butSymbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.butSymbol.Name = "butSymbol";
-            this.butSymbol.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
-            this.butSymbol.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.butSymbol.ShadowDecoration.Parent = this.butSymbol;
-            this.butSymbol.Size = new System.Drawing.Size(73, 68);
-            this.butSymbol.TabIndex = 29;
-            this.butSymbol.Text = ",";
-            this.butSymbol.Click += new System.EventHandler(this.ButSymbol_Click);
+            this.butDecimal.CheckedState.Parent = this.butDecimal;
+            this.butDecimal.CustomImages.Parent = this.butDecimal;
+            this.butDecimal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.butDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butDecimal.ForeColor = System.Drawing.Color.White;
+            this.butDecimal.HoverState.Parent = this.butDecimal;
+            this.butDecimal.Location = new System.Drawing.Point(231, 485);
+            this.butDecimal.Margin = new System.Windows.Forms.Padding(4);
+            this.butDecimal.Name = "butDecimal";
+            this.butDecimal.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
+            this.butDecimal.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.butDecimal.ShadowDecoration.Parent = this.butDecimal;
+            this.butDecimal.Size = new System.Drawing.Size(73, 68);
+            this.butDecimal.TabIndex = 29;
+            this.butDecimal.Text = ",";
+            this.butDecimal.Click += new System.EventHandler(this.ButDecimal_Click);
             // 
             // but0
             // 
@@ -199,7 +199,7 @@
             this.but0.ForeColor = System.Drawing.Color.White;
             this.but0.HoverState.Parent = this.but0;
             this.but0.Location = new System.Drawing.Point(41, 485);
-            this.but0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but0.Margin = new System.Windows.Forms.Padding(4);
             this.but0.Name = "but0";
             this.but0.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but0.ShadowDecoration.Parent = this.but0;
@@ -220,7 +220,7 @@
             this.but1.ForeColor = System.Drawing.Color.White;
             this.but1.HoverState.Parent = this.but1;
             this.but1.Location = new System.Drawing.Point(41, 410);
-            this.but1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but1.Margin = new System.Windows.Forms.Padding(4);
             this.but1.Name = "but1";
             this.but1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -239,7 +239,7 @@
             this.but2.ForeColor = System.Drawing.Color.White;
             this.but2.HoverState.Parent = this.but2;
             this.but2.Location = new System.Drawing.Point(136, 410);
-            this.but2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but2.Margin = new System.Windows.Forms.Padding(4);
             this.but2.Name = "but2";
             this.but2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -258,7 +258,7 @@
             this.but3.ForeColor = System.Drawing.Color.White;
             this.but3.HoverState.Parent = this.but3;
             this.but3.Location = new System.Drawing.Point(231, 410);
-            this.but3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but3.Margin = new System.Windows.Forms.Padding(4);
             this.but3.Name = "but3";
             this.but3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(168)))));
             this.but3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -280,7 +280,7 @@
             this.butEqual.ForeColor = System.Drawing.Color.White;
             this.butEqual.HoverState.Parent = this.butEqual;
             this.butEqual.Location = new System.Drawing.Point(325, 485);
-            this.butEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butEqual.Margin = new System.Windows.Forms.Padding(4);
             this.butEqual.Name = "butEqual";
             this.butEqual.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(186)))), ((int)(((byte)(96)))));
             this.butEqual.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -299,7 +299,7 @@
             this.guna2Panel1.Controls.Add(this.ButAc);
             this.guna2Panel1.Controls.Add(this.but0);
             this.guna2Panel1.Controls.Add(this.but1);
-            this.guna2Panel1.Controls.Add(this.butSymbol);
+            this.guna2Panel1.Controls.Add(this.butDecimal);
             this.guna2Panel1.Controls.Add(this.but2);
             this.guna2Panel1.Controls.Add(this.but9);
             this.guna2Panel1.Controls.Add(this.but3);
@@ -314,7 +314,7 @@
             this.guna2Panel1.Controls.Add(this.but5);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(444, 588);
@@ -329,7 +329,7 @@
             this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
             this.MinimizeBtn.HoverState.Parent = this.MinimizeBtn;
             this.MinimizeBtn.Location = new System.Drawing.Point(85, 21);
-            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBtn.Name = "MinimizeBtn";
             this.MinimizeBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.MinimizeBtn.ShadowDecoration.Parent = this.MinimizeBtn;
@@ -346,7 +346,7 @@
             this.CloseBtn.ForeColor = System.Drawing.Color.White;
             this.CloseBtn.HoverState.Parent = this.CloseBtn;
             this.CloseBtn.Location = new System.Drawing.Point(44, 21);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.CloseBtn.ShadowDecoration.Parent = this.CloseBtn;
@@ -395,7 +395,7 @@
             this.ButAc.ForeColor = System.Drawing.Color.Black;
             this.ButAc.HoverState.Parent = this.ButAc;
             this.ButAc.Location = new System.Drawing.Point(41, 185);
-            this.ButAc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButAc.Margin = new System.Windows.Forms.Padding(4);
             this.ButAc.Name = "ButAc";
             this.ButAc.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(210)))));
             this.ButAc.ShadowDecoration.Parent = this.ButAc;
@@ -419,7 +419,7 @@
             this.butDivide.ForeColor = System.Drawing.Color.White;
             this.butDivide.HoverState.Parent = this.butDivide;
             this.butDivide.Location = new System.Drawing.Point(325, 185);
-            this.butDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butDivide.Margin = new System.Windows.Forms.Padding(4);
             this.butDivide.Name = "butDivide";
             this.butDivide.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(186)))), ((int)(((byte)(96)))));
             this.butDivide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -441,7 +441,7 @@
             this.butMultiply.ForeColor = System.Drawing.Color.White;
             this.butMultiply.HoverState.Parent = this.butMultiply;
             this.butMultiply.Location = new System.Drawing.Point(325, 260);
-            this.butMultiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butMultiply.Margin = new System.Windows.Forms.Padding(4);
             this.butMultiply.Name = "butMultiply";
             this.butMultiply.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(186)))), ((int)(((byte)(96)))));
             this.butMultiply.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -463,7 +463,7 @@
             this.butMinus.ForeColor = System.Drawing.Color.White;
             this.butMinus.HoverState.Parent = this.butMinus;
             this.butMinus.Location = new System.Drawing.Point(325, 335);
-            this.butMinus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butMinus.Margin = new System.Windows.Forms.Padding(4);
             this.butMinus.Name = "butMinus";
             this.butMinus.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(186)))), ((int)(((byte)(96)))));
             this.butMinus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -485,7 +485,7 @@
             this.butPlus.ForeColor = System.Drawing.Color.White;
             this.butPlus.HoverState.Parent = this.butPlus;
             this.butPlus.Location = new System.Drawing.Point(325, 410);
-            this.butPlus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butPlus.Margin = new System.Windows.Forms.Padding(4);
             this.butPlus.Name = "butPlus";
             this.butPlus.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(186)))), ((int)(((byte)(96)))));
             this.butPlus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -514,9 +514,11 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Калькулятор";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -529,7 +531,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton but7;
         private Guna.UI2.WinForms.Guna2CircleButton but8;
         private Guna.UI2.WinForms.Guna2CircleButton but9;
-        private Guna.UI2.WinForms.Guna2CircleButton butSymbol;
+        private Guna.UI2.WinForms.Guna2CircleButton butDecimal;
         private Guna.UI2.WinForms.Guna2Button but0;
         private Guna.UI2.WinForms.Guna2CircleButton but1;
         private Guna.UI2.WinForms.Guna2CircleButton but2;

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Calculator.WinForms
 {
-    // TODO: инсталятор, кнопки клавиатуры.
+    // TODO: инсталятор.
     public partial class MainForm : Form
     {
         private CalculatorBase _calculator;
@@ -13,7 +13,7 @@ namespace Calculator.WinForms
 
         private bool _isClearDisplay;
         private bool _isCalc;
-
+       
         public MainForm()
         {
             InitializeComponent();
@@ -22,6 +22,9 @@ namespace Calculator.WinForms
             _calculator.UpdateExpression("0");
         }
 
+        /// <summary>
+        /// Отображение результата вычислений на дисплее калькулятора
+        /// </summary>
         private void DisplayCalcResult()
         {
             _calculator.CalculateExpression();
@@ -30,6 +33,9 @@ namespace Calculator.WinForms
             _isCalc = false;
         }
 
+        /// <summary>
+        /// Очистка дисплея калькулятора
+        /// </summary>
         private void ClearDisplay()
         {
             if (_isClearDisplay)
@@ -39,7 +45,37 @@ namespace Calculator.WinForms
             }
         }
 
+        /// <summary>
+        /// Событие при нажатии на кнопку цифры
+        /// </summary>        
+        private void EventNumClick(int num)
+        {
+            ClearDisplay();
+
+            if (DisplayTextBox.Text == "0")
+            {
+                DisplayTextBox.Text = null;
+            }
+
+            DisplayTextBox.Text = DisplayTextBox.Text + num;
+
+            _calculator.UpdateExpression(num.ToString());
+
+            if (_selectOperation.HasValue)
+            {
+                _isCalc = true;
+            }
+        }
+
         private void But0_Click(object sender, EventArgs e)
+        {
+            EventZeroClick();
+        }
+
+        /// <summary>
+        /// Событие при нажатии кнопки ноль
+        /// </summary>
+        private void EventZeroClick()
         {
             ClearDisplay();
 
@@ -57,176 +93,58 @@ namespace Calculator.WinForms
 
         private void But1_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 1;
-
-            _calculator.UpdateExpression("1");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(1);
         }
 
         private void But2_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 2;
-
-            _calculator.UpdateExpression("2");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(2);
         }
 
         private void But3_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 3;
-
-            _calculator.UpdateExpression("3");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(3);
         }
 
         private void But4_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 4;
-
-            _calculator.UpdateExpression("4");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(4);
         }
 
         private void But5_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 5;
-
-            _calculator.UpdateExpression("5");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(5);
         }
 
         private void But6_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 6;
-
-            _calculator.UpdateExpression("6");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(6);
         }
 
         private void But7_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 7;
-
-            _calculator.UpdateExpression("7");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(7);
         }
 
         private void But8_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 8;
-
-            _calculator.UpdateExpression("8");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(8);
         }
 
         private void But9_Click(object sender, EventArgs e)
         {
-            ClearDisplay();
-
-            if (DisplayTextBox.Text == "0")
-            {
-                DisplayTextBox.Text = null;
-            }
-
-            DisplayTextBox.Text = DisplayTextBox.Text + 9;
-
-            _calculator.UpdateExpression("9");
-
-            if (_selectOperation.HasValue)
-            {
-                _isCalc = true;
-            }
+            EventNumClick(9);
         }
 
-        private void ButSymbol_Click(object sender, EventArgs e)
+        private void ButDecimal_Click(object sender, EventArgs e)
+        {
+            EventDecimalClick();
+        }
+
+        /// <summary>
+        /// Событие при нажатии на кнопку запятой
+        /// </summary>
+        private void EventDecimalClick()
         {
             string lastOperand = _calculator.GetLastOperand();
 
@@ -239,11 +157,14 @@ namespace Calculator.WinForms
             _calculator.UpdateExpression(",");
         }
 
-        private void ButPlus_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Событие при нажатии на кнопку операции 2го приоритета
+        /// </summary>        
+        private void EventOperationPrioritySecondClick(Operation operation)
         {
             _isClearDisplay = true;
 
-            if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Plus && !_isCalc)
+            if (_selectOperation.HasValue && _selectOperation.Value == operation.Value && !_isCalc)
             {
                 return;
             }
@@ -253,73 +174,55 @@ namespace Calculator.WinForms
                 DisplayCalcResult();
             }
 
-            _calculator.UpdateExpression(" + ");
-            _selectOperation = OperationType.Plus;
+            _calculator.UpdateExpression($" {operation.Symbol.Trim()} ");
+            _selectOperation = operation.Value;
+        }
+
+        private void ButPlus_Click(object sender, EventArgs e)
+        {
+            EventOperationPrioritySecondClick(Operation.PLUS);
+        }        
+
+        private void ButMinus_Click(object sender, EventArgs e)
+        {
+            EventOperationPrioritySecondClick(Operation.MINUS);
+        }
+
+        /// <summary>
+        /// Событие при нажатии на кнопку операции 1го приоритета
+        /// </summary>        
+        private void EventOperationPriorityFirstClick(Operation operation)
+        {
+            if (_selectOperation != null && (_selectOperation.Value == OperationType.Plus || _selectOperation.Value == OperationType.Minus))
+            {
+                _isCalc = false;
+            }
+
+            _isClearDisplay = true;
+
+            if (_selectOperation.HasValue && _selectOperation.Value == operation.Value && !_isCalc)
+            {
+                return;
+            }
+
+            _calculator.UpdateExpression($" {operation.Symbol.Trim()} ");
+            _selectOperation = operation.Value;
+
+            if (_isCalc)
+            {
+                DisplayCalcResult();
+            }
         }
 
         private void ButDivide_Click(object sender, EventArgs e)
         {
-            if (_selectOperation != null && (_selectOperation.Value == OperationType.Plus || _selectOperation.Value == OperationType.Minus))
-            {
-                _isCalc = false;
-            }
-
-            _isClearDisplay = true;
-
-            if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Division && !_isCalc)
-            {
-                return;
-            }
-
-            _calculator.UpdateExpression(" / ");
-            _selectOperation = OperationType.Division;
-
-            if (_isCalc)
-            {
-                DisplayCalcResult();
-            }
-        }
+            EventOperationPriorityFirstClick(Operation.DIVISION);
+        }        
 
         private void ButMultiply_Click(object sender, EventArgs e)
         {
-            if (_selectOperation != null && (_selectOperation.Value == OperationType.Plus || _selectOperation.Value == OperationType.Minus))
-            {
-                _isCalc = false;
-            }
-
-            _isClearDisplay = true;
-
-            if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Multiply && !_isCalc)
-            {
-                return;
-            }
-
-            _calculator.UpdateExpression(" * ");
-            _selectOperation = OperationType.Multiply;
-
-            if (_isCalc)
-            {
-                DisplayCalcResult();
-            }
-        }
-
-        private void ButMinus_Click(object sender, EventArgs e)
-        {
-            _isClearDisplay = true;
-
-            if (_selectOperation.HasValue && _selectOperation.Value == OperationType.Minus && !_isCalc)
-            {
-                return;
-            }
-
-            if (_isCalc)
-            {
-                DisplayCalcResult();
-            }
-
-            _calculator.UpdateExpression(" - ");
-            _selectOperation = OperationType.Minus;
-        }
+            EventOperationPriorityFirstClick(Operation.MULTIPLY);
+        }        
 
         private void ButEqual_Click(object sender, EventArgs e)
         {
@@ -328,14 +231,22 @@ namespace Calculator.WinForms
 
         private void ButAc_Click(object sender, EventArgs e)
         {
+            EventAcClick();
+        }
+
+        /// <summary>
+        /// Событие при нажатии на клавишу стирание
+        /// </summary>
+        private void EventAcClick()
+        {
             _calculator.Clear();
             _calculator.UpdateExpression("0");
 
-            DisplayTextBox.Text = "0";           
+            DisplayTextBox.Text = "0";
             _selectOperation = null;
 
             _isCalc = false;
-            _isClearDisplay = false;            
+            _isClearDisplay = false;
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -346,6 +257,84 @@ namespace Calculator.WinForms
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad0:
+                    EventZeroClick();
+                    break;
+
+                case Keys.NumPad1:
+                    EventNumClick(1);
+                    break;
+
+                case Keys.NumPad2:
+                    EventNumClick(2);
+                    break;
+
+                case Keys.NumPad3:
+                    EventNumClick(3);
+                    break;
+
+                case Keys.NumPad4:
+                    EventNumClick(4);
+                    break;
+
+                case Keys.NumPad5:
+                    EventNumClick(5);
+                    break;
+
+                case Keys.NumPad6:
+                    EventNumClick(6);
+                    break;
+
+                case Keys.NumPad7:
+                    EventNumClick(7);
+                    break;
+
+                case Keys.NumPad8:
+                    EventNumClick(8);
+                    break;
+
+                case Keys.NumPad9:
+                    EventNumClick(9);
+                    break;
+
+                case Keys.Decimal:
+                    EventDecimalClick();
+                    break;
+
+                case Keys.Multiply:
+                    EventOperationPriorityFirstClick(Operation.MULTIPLY);
+                    break;
+
+                case Keys.Divide:
+                    EventOperationPriorityFirstClick(Operation.DIVISION);
+                    break;
+
+                case Keys.Add:
+                    EventOperationPrioritySecondClick(Operation.PLUS);
+                    break;
+
+                case Keys.Subtract:
+                    EventOperationPrioritySecondClick(Operation.MINUS);
+                    break;
+
+                case Keys.Back:
+                    EventAcClick();
+                    break;
+
+                case Keys.Enter:
+                    DisplayCalcResult();
+                    break;
+
+                case Keys.Escape:
+                    Close();
+                    break;
+            }
         }
     }
 }
