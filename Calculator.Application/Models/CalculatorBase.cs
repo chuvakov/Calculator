@@ -172,5 +172,15 @@ namespace Calculator.Models
                 _expression.Append(symbol);
             }            
         }
+
+        public string GetLastOperand()
+        {
+            string lastOperand = _expression
+                .ToString()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .LastOrDefault();
+
+            return lastOperand;
+        }
     }
 }

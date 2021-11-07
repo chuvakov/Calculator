@@ -1,18 +1,11 @@
 ﻿using Calculator.Enums;
 using Calculator.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator.WinForms
 {
-    // TODO: Поменять иконку, функционал запятой, функционал нуля, инсталятор, кнопки клавиатуры.
+    // TODO: функционал нуля, инсталятор, кнопки клавиатуры.
     public partial class MainForm : Form
     {
         private CalculatorBase _calculator;
@@ -26,6 +19,7 @@ namespace Calculator.WinForms
             InitializeComponent();
 
             _calculator = new CalculatorBase();
+            _calculator.UpdateExpression("0");
         }
 
         private void DisplayCalcResult()
@@ -181,6 +175,13 @@ namespace Calculator.WinForms
 
         private void ButSymbol_Click(object sender, EventArgs e)
         {
+            string lastOperand = _calculator.GetLastOperand();
+
+            if (string.IsNullOrEmpty(lastOperand) || lastOperand.Contains(","))
+            {
+                return;
+            }
+
             DisplayTextBox.Text = DisplayTextBox.Text + ',';
             _calculator.UpdateExpression(",");
         }
@@ -275,12 +276,13 @@ namespace Calculator.WinForms
         private void ButAc_Click(object sender, EventArgs e)
         {
             _calculator.Clear();
+            _calculator.UpdateExpression("0");
 
-            DisplayTextBox.Text = null;
+            DisplayTextBox.Text = "0";           
             _selectOperation = null;
 
             _isCalc = false;
-            _isClearDisplay = false;
+            _isClearDisplay = false;            
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)

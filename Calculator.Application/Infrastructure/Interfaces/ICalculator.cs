@@ -16,5 +16,10 @@
         /// Обновление выражения
         /// </summary>        
         void UpdateExpression(string symbol);
+
+        /// <summary>
+        /// Получение последнего операнда
+        /// </summary>        
+        string GetLastOperand();
     }
 }
