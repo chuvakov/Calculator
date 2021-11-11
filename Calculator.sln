@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Application", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.WinForms", "Calculator.WinForms\Calculator.WinForms.csproj", "{28D07499-0756-4914-B8C1-8A9202C087A2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calculator.Installer", "Calculator.Installer\Calculator.Installer.vdproj", "{0641DF3A-10A1-43D4-89F6-ACCDBFC84D49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{28D07499-0756-4914-B8C1-8A9202C087A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28D07499-0756-4914-B8C1-8A9202C087A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28D07499-0756-4914-B8C1-8A9202C087A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0641DF3A-10A1-43D4-89F6-ACCDBFC84D49}.Debug|Any CPU.ActiveCfg = Debug
+		{0641DF3A-10A1-43D4-89F6-ACCDBFC84D49}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
