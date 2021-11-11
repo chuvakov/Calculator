@@ -488,6 +488,20 @@
             "Icon" = "8:_0A5533884C1F4D94B5ECBC1CC06EB689"
             "Feature" = "8:"
             }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_71F9349D9CD94B8C92966F5EC5A42344"
+            {
+            "Name" = "8:Калькулятор"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_770D7CA6B9794D41A4D8128D837058F3"
+            "Folder" = "8:_063C28B62CD4421DADDBABAB0107C169"
+            "WorkingFolder" = "8:_2AC0FB170D764C03AE0BEEAC79E8C5DE"
+            "Icon" = "8:_0A5533884C1F4D94B5ECBC1CC06EB689"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DEB683AFA03E429FAFE3BF0753DA0CB4"
             {
             "Name" = "8:Калькулятор"
@@ -498,6 +512,20 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_770D7CA6B9794D41A4D8128D837058F3"
             "Folder" = "8:_C7DEFA4D213B47C5B3491338CB418634"
+            "WorkingFolder" = "8:_2AC0FB170D764C03AE0BEEAC79E8C5DE"
+            "Icon" = "8:_0A5533884C1F4D94B5ECBC1CC06EB689"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E0493F0F8DB54C15A7C53ECF2641F004"
+            {
+            "Name" = "8:Калькулятор"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_770D7CA6B9794D41A4D8128D837058F3"
+            "Folder" = "8:_2AC0FB170D764C03AE0BEEAC79E8C5DE"
             "WorkingFolder" = "8:_2AC0FB170D764C03AE0BEEAC79E8C5DE"
             "Icon" = "8:_0A5533884C1F4D94B5ECBC1CC06EB689"
             "Feature" = "8:"
