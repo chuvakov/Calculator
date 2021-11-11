@@ -4,8 +4,7 @@ using System;
 using System.Windows.Forms;
 
 namespace Calculator.WinForms
-{
-    // TODO: инсталятор.
+{    
     public partial class MainForm : Form
     {
         private CalculatorBase _calculator;
@@ -50,6 +49,7 @@ namespace Calculator.WinForms
         /// </summary>        
         private void EventNumClick(int num)
         {
+            ResetOperationButtonCheckedes();
             ClearDisplay();
 
             if (DisplayTextBox.Text == "0")
@@ -77,6 +77,7 @@ namespace Calculator.WinForms
         /// </summary>
         private void EventZeroClick()
         {
+            ResetOperationButtonCheckedes();
             ClearDisplay();
 
             if (DisplayTextBox.Text != "0")
@@ -146,6 +147,7 @@ namespace Calculator.WinForms
         /// </summary>
         private void EventDecimalClick()
         {
+            ResetOperationButtonCheckedes();
             string lastOperand = _calculator.GetLastOperand();
 
             if (string.IsNullOrEmpty(lastOperand) || lastOperand.Contains(","))
@@ -161,7 +163,7 @@ namespace Calculator.WinForms
         /// Событие при нажатии на кнопку операции 2го приоритета
         /// </summary>        
         private void EventOperationPrioritySecondClick(Operation operation)
-        {
+        {            
             _isClearDisplay = true;
 
             if (_selectOperation.HasValue && _selectOperation.Value == operation.Value && !_isCalc)
@@ -180,11 +182,17 @@ namespace Calculator.WinForms
 
         private void ButPlus_Click(object sender, EventArgs e)
         {
+            ResetOperationButtonCheckedes();
+            butPlus.Checked = true;
+
             EventOperationPrioritySecondClick(Operation.PLUS);
         }        
 
         private void ButMinus_Click(object sender, EventArgs e)
         {
+            ResetOperationButtonCheckedes();
+            butMinus.Checked = true;
+
             EventOperationPrioritySecondClick(Operation.MINUS);
         }
 
@@ -216,16 +224,23 @@ namespace Calculator.WinForms
 
         private void ButDivide_Click(object sender, EventArgs e)
         {
+            ResetOperationButtonCheckedes();
+            butDivide.Checked = true;
+
             EventOperationPriorityFirstClick(Operation.DIVISION);
         }        
 
         private void ButMultiply_Click(object sender, EventArgs e)
         {
+            ResetOperationButtonCheckedes();
+            butMultiply.Checked = true;
+
             EventOperationPriorityFirstClick(Operation.MULTIPLY);
         }        
-
+        
         private void ButEqual_Click(object sender, EventArgs e)
         {
+            ResetOperationButtonCheckedes();            
             DisplayCalcResult();
         }
 
@@ -239,6 +254,8 @@ namespace Calculator.WinForms
         /// </summary>
         private void EventAcClick()
         {
+            ResetOperationButtonCheckedes();
+
             _calculator.Clear();
             _calculator.UpdateExpression("0");
 
@@ -308,18 +325,30 @@ namespace Calculator.WinForms
                     break;
 
                 case Keys.Multiply:
+                    ResetOperationButtonCheckedes();
+                    butMultiply.Checked = true;
+
                     EventOperationPriorityFirstClick(Operation.MULTIPLY);
                     break;
 
                 case Keys.Divide:
+                    ResetOperationButtonCheckedes();
+                    butDivide.Checked = true;
+
                     EventOperationPriorityFirstClick(Operation.DIVISION);
                     break;
 
                 case Keys.Add:
+                    ResetOperationButtonCheckedes();
+                    butPlus.Checked = true;
+
                     EventOperationPrioritySecondClick(Operation.PLUS);
                     break;
 
                 case Keys.Subtract:
+                    ResetOperationButtonCheckedes();
+                    butMinus.Checked = true;
+
                     EventOperationPrioritySecondClick(Operation.MINUS);
                     break;
 
@@ -328,6 +357,7 @@ namespace Calculator.WinForms
                     break;
 
                 case Keys.Enter:
+                    ResetOperationButtonCheckedes();
                     DisplayCalcResult();
                     break;
 
@@ -335,6 +365,14 @@ namespace Calculator.WinForms
                     Close();
                     break;
             }
+        }
+
+        private void ResetOperationButtonCheckedes()
+        {
+            butPlus.Checked = false;
+            butMinus.Checked = false;
+            butDivide.Checked = false;
+            butMultiply.Checked = false;
         }
     }
 }
